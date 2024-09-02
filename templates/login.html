@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+    <section class="login_form">
+        <h2>Login</h2>
+        <form>
+            <label for="username_input">Username:</label>
+            <input type="text" id="username_input" name="username"><br><br>
+            <label for="password_input">Password:</label>
+            <input type="password" id="password_input" name="password"><br><br>
+            <input type="submit" value="Login">
+        </form>
+        <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up</a></p>
+    </section>
+</body>
+</html>

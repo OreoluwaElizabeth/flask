@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Search Contact</title>
+</head>
+<body>
+    <h1>Search Contact</h1>
+    <form action="{{ url_for('search_contacts') }}" method="get">
+        <input type="text" name="query" placeholder="Search by name or email">
+        <input type="submit" value="Search">
+    </form>
+
+    <ul>
+        {% for contact in search_results %}
+            <li>
+                {{ contact['first_name'] }} {{ contact['last_name'] }} ({{ contact['email'] }} | {{ contact['phone'] }})
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

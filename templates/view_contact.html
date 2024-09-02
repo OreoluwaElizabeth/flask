@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Contacts</title>
+</head>
+<body>
+    <h1>List of Contacts</h1>
+    <ul>
+        {% for contact in contacts %}
+            <li>
+                {{ contact['first_name'] }} {{ contact['last_name'] }}
+                ({{ contact['email'] }} | {{ contact['phone'] }})
+                <a href="{{ url_for('edit_contact', contact_id=contact['id']) }}">Edit</a>
+                <a href="{{ url_for('delete_contact', contact_id=contact['id']) }}">Delete</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ url_for('home') }}">Add new Contact</a></p>
+    <p><a href="{{ url_for('search_contacts') }}">Search Contacts</a></p>
+</body>
+</html>

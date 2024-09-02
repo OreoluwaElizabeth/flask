@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Contact management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'landing.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('view_contacts') }}">Contact</a></li>
+                <li><a href="{{ url_for('add_contact_form') }}">Add Contact</a></li>
+                <li><a href="{{ url_for('search_contacts') }}">Search Contacts</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Welcome to Contact Manager</h1>
+        <p>Let's manage your contacts effortlessly.</p>
+    </main>
+</body>
+</html>
